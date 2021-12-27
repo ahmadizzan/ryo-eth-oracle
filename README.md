@@ -1,18 +1,3 @@
-# Basic Sample Hardhat Project
-
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
-
-Try running some of the following tasks:
-
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
-```
 
 # Run Your Own ETH Oracle
 
@@ -44,12 +29,9 @@ IMPORTANT: after deploying the contracts, change `dataOracleAddress` and `oracle
 
 #### Simulate data update
 
-***Step 1:*** run local network (if not already)
-```
-npx hardhat node
-```
+Assuming you have deployed the contracts.
 
-***Step 2:*** run sample server
+***Step 1:*** run sample server
 
 This script will listen to new request events triggered from oracle caller contract and periodically process them.
 
@@ -57,7 +39,7 @@ This script will listen to new request events triggered from oracle caller contr
 node scripts/server.js
 ```
 
-***Step 3:*** run trigger update data script
+***Step 2:*** run trigger update data script
 
 This will tigger will call OracleCaller contract's `updateData`, emitting `ReceivedNewRequestIdEvent` event, which will trigger data fetching logic in `scripts/server.js`.
 
@@ -74,7 +56,7 @@ NEW EVENT - DataUpdatedEvent: id = BigNumber { _hex: '0x0203', _isBigNumber: tru
 
 Which shows that the request was listened by the server and the server triggered a data update to the contract.
 
-## Run test
+## Run tests
 ```
 npx hardhat test
 ```
