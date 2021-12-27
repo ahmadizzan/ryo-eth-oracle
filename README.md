@@ -6,8 +6,8 @@ Run your own simple ETH oracle implementation, fetching off-chain data from exte
 This project is mostly based on [CryptoZombies oracle series](https://cryptozombies.io/en/lesson/14), modified and ported to [hardhat](https://github.com/nomiclabs/hardhat)/[ether.js](https://github.com/ethers-io/ethers.js/).
 
 ## Requirements
-1. node js (tested on v16.13.1)
-2. npx
+1. `node js (tested on v16.13.1)`
+2. `npx`
 
 ## Installation
 ```

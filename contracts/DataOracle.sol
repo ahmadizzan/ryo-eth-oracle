@@ -15,14 +15,6 @@ contract DataOracle is DataOracleInterface, Ownable {
   event GetLatestDataEvent(address callerAddress, uint id);
   event SetLatestDataEvent(string data, address callerAddress);
 
-  function heartbeat() public pure returns (string memory) {
-      return "hi";
-  }
-
-  function heartbeat2() public pure returns (uint256) {
-      return 123;
-  }
-
   function getLatestData() external override returns (uint256) {
     randNonce++;
     uint id = uint(keccak256(abi.encodePacked(block.timestamp, msg.sender, randNonce))) % modulus;
