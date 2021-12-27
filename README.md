@@ -1,7 +1,7 @@
 
-# Run Your Own ETH Oracle
+# Run Your Own Ethereum Oracle
 
-Run your own simple ETH oracle implementation, fetching off-chain data from external APIs.
+Run your own simple Ethereum oracle implementation, fetching off-chain data from external APIs.
 
 This project is mostly based on [CryptoZombies oracle series](https://cryptozombies.io/en/lesson/14), modified and ported to [hardhat](https://github.com/nomiclabs/hardhat)/[ether.js](https://github.com/ethers-io/ethers.js/).
 
