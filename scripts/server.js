@@ -92,10 +92,7 @@ async function processRequestQueue(dataOracle) {
     console.log("NEW EVENT - DataUpdatedEvent: id =", _id, 'data =', _data);
   })
 
-  // let id = 1;
   setInterval(async () => {
-    // pendingRequestQueue.push(id);
-    // id++;
     processRequestQueue(dataOracle);
   }, 2000);
 
