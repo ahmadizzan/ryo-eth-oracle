@@ -5,6 +5,7 @@
 // Runtime Environment's members available in the global scope.
 // const hre = require("hardhat");
 const { ethers } = require("ethers");
+const axios = require('axios');
 
 const DataOracleJSON = require(__dirname + '/../artifacts/contracts/DataOracle.sol/DataOracle.json');
 const OracleCallerJSON = require(__dirname + '/../artifacts/contracts/OracleCaller.sol/OracleCaller.json');
@@ -18,10 +19,11 @@ const PROCESS_CHUNK = 3;
 
 let pendingRequestQueue = []
 
-// TODO: wire to actual endpoint
 async function fetchData() {
-  const now = Date.now();
-  return "data " + now;
+  // Get random shibe pict! 🐕
+  // NOTE: change this to your desired API
+  const response = await axios.get('http://shibe.online/api/shibes');
+  return response.data[0];
 }
 
 async function setLatestData(dataOracle, id, data) {
