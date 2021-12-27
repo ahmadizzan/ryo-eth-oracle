@@ -72,15 +72,16 @@ describe("OracleCaller", function () {
     const requestId = event.args.id;
 
     //// Set data
-    const setLatestDataTx = await dataOracle.setLatestData("hehe", oracleCaller.address, requestId);
+    const testString = "test string 123";
+    const setLatestDataTx = await dataOracle.setLatestData(testString, oracleCaller.address, requestId);
     await setLatestDataTx.wait();
     expect(setLatestDataTx)
       .to.emit(oracleCaller, "DataUpdatedEvent")
-        .withArgs(requestId, "hehe")
+        .withArgs(requestId, testString)
       .to.emit(dataOracle, "SetLatestDataEvent")
-        .withArgs("hehe", oracleCaller.address);
+        .withArgs(testString, oracleCaller.address);
     
     //// Check latest data value
-    expect(await oracleCaller.getData()).to.equal("hehe");
+    expect(await oracleCaller.getData()).to.equal(testString);
   });
 });
