@@ -18,6 +18,10 @@ contract OracleCaller is OracleCallerInterface, Ownable {
   event ReceivedNewRequestIdEvent(uint256 id);
   event DataUpdatedEvent(uint256 id, string data);
 
+  function getData() public view returns (string memory) {
+    return data;
+  }
+
   function getOracleInstanceAddress() public view returns (address) {
       return oracleAddress;
   }
