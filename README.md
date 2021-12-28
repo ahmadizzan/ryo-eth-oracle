@@ -7,7 +7,7 @@ This project is mostly based on [CryptoZombies oracle series](https://cryptozomb
 
 Here is the architecture of the system.
 
-<img style="width: 300px;" src="diagram.png" />
+<img style="width: 600px;" src="diagram.png" />
 
 ## Requirements
 1. `node js (tested on v16.13.1)`
