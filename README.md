@@ -26,7 +26,7 @@ npm install
 # run local network
 npx hardhat node
 # deploy to local network
-npx hardhat run --networkscripts/deploy.js
+npx hardhat run --network localhost scripts/deploy.js
 ```
 
 IMPORTANT: after deploying the contracts, change `dataOracleAddress` and `oracleCallerAddress` to the deployed addresses of each contracts in `scripts/server.js` and `scripts/trigger-update-data.js`.

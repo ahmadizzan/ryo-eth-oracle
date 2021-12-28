@@ -46,7 +46,7 @@ async function processRequest(dataOracle, id) {
     } catch (error) {
       if (retries === MAX_RETRIES - 1) {
         // set data to empty string
-        await setLatestData(dataOracle, id, data);
+        await setLatestData(dataOracle, id, "");
         return;
       }
       retries++
